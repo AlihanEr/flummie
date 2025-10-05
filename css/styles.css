@@ -733,7 +733,7 @@ body {
 
 /* Instagram Section */
 .instagram-section {
-    padding: 100px 0;
+    padding: 30px 0;
     background: linear-gradient(135deg, #f3a473 0%, #ea8967 25%, #e37a65 50%, #d46f7d 75%, #c86e9d 100%);
     color: var(--white);
 }
@@ -742,28 +742,37 @@ body {
     text-align: center;
     max-width: 600px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
 }
 
 .instagram-icon {
-    margin-bottom: 2rem;
+    margin-bottom: 0;
+}
+
+.instagram-icon svg {
+    width: 50px;
+    height: 50px;
 }
 
 .instagram-content h3 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 0;
     font-weight: 300;
     font-style: italic;
 }
 
 .instagram-content p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    font-size: 0.95rem;
+    margin-bottom: 0;
     opacity: 0.95;
+    line-height: 1.5;
 }
 
 .btn-instagram {
     display: inline-block;
-    padding: 15px 40px;
+    padding: 10px 30px;
     background: var(--white);
     color: #c837ab;
     text-decoration: none;
