@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Flummie - Handcrafted flower candles that bring beauty and warmth to your space">
-    <title>Flummie - Artisan Flower Candles</title>
+    <meta name="description" content="About Flummie - Learn about our handcrafted flower candles and artisan craftsmanship">
+    <title>About Us - Flummie Artisan Flower Candles</title>
     <link rel="icon" type="image/png" href="images/logo-no-text.png">
     <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -22,7 +22,7 @@
         <div class="nav-container">
             <a href="index.html" class="logo">Flummie</a>
             <ul class="nav-menu">
-                <li><a href="about.html" data-i18n="nav.about">About Us</a></li>
+                <li><a href="about.html" data-i18n="nav.about" class="active">About Us</a></li>
                 <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
                 <div class="language-switcher">
                     <button class="lang-btn active" data-lang="en">EN</button>
@@ -38,129 +38,8 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <h1 class="hero-title" data-i18n="hero.title">Flummie</h1>
-            <p class="hero-subtitle" data-i18n="hero.subtitle">Handcrafted Flower Candles</p>
-            <p class="hero-description" data-i18n="hero.description">Where artistry meets warmth - Each candle is a unique masterpiece</p>
-            <a href="#gallery" class="btn-primary" data-i18n="hero.cta">Explore Collection</a>
-        </div>
-        <div class="scroll-indicator">
-            <span></span>
-        </div>
-    </section>
-
-    <!-- Featured Section -->
-    <section class="featured">
-        <div class="container">
-            <div class="featured-grid">
-                <div class="featured-item">
-                    <div class="featured-icon">🌸</div>
-                    <h3 data-i18n="featured.handcrafted.title">Handcrafted</h3>
-                    <p data-i18n="featured.handcrafted.description">Each candle is carefully handmade with love and attention to detail</p>
-                </div>
-                <div class="featured-item">
-                    <div class="featured-icon">🌺</div>
-                    <h3 data-i18n="featured.unique.title">Unique Designs</h3>
-                    <p data-i18n="featured.unique.description">Beautiful flower shapes that bloom in wax, creating stunning centerpieces</p>
-                </div>
-                <div class="featured-item">
-                    <div class="featured-icon">✨</div>
-                    <h3 data-i18n="featured.quality.title">Premium Quality</h3>
-                    <p data-i18n="featured.quality.description">Made with high-quality materials for long-lasting beauty and fragrance</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title" data-i18n="gallery.title">My Creations</h2>
-                <p class="section-subtitle" data-i18n="gallery.subtitle">A collection of handcrafted flower candles</p>
-            </div>
-
-            <!-- Filter Buttons -->
-            <div class="gallery-filters">
-                <button class="filter-btn active" data-filter="all" data-i18n="gallery.filters.all">All</button>
-                <button class="filter-btn" data-filter="alya" data-i18n="gallery.filters.alya">Alya</button>
-                <button class="filter-btn" data-filter="aza" data-i18n="gallery.filters.aza">Aza</button>
-                <button class="filter-btn" data-filter="rumos" data-i18n="gallery.filters.rumos">Rumos</button>
-                <button class="filter-btn" data-filter="pure" data-i18n="gallery.filters.pure">Pure</button>
-                <button class="filter-btn" data-filter="custom" data-i18n="gallery.filters.custom">Custom crafts</button>
-            </div>
-
-            <!-- Gallery Grid -->
-            <div class="gallery-grid" id="gallery-grid">
-                <!-- Gallery items will be populated by JavaScript -->
-                <div class="gallery-item" data-category="alya">
-                    <div class="gallery-image">
-                        <img src="images/alya.PNG" alt="Alya Candle" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3 data-i18n="gallery.items.alya.title">White Rose Bloom</h3>
-                        <p data-i18n="gallery.items.alya.description">Handcrafted rose candle bouquet</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="aza">
-                    <div class="gallery-image">
-                        <img src="images/aza.jpg" alt="Aza Candle" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3 data-i18n="gallery.items.aza.title">Aza Bouquet</h3>
-                        <p data-i18n="gallery.items.aza.description">Elegant rose candle bouquet</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="rumos">
-                    <div class="gallery-image">
-                        <img src="images/rumos.PNG" alt="Rumos Candle" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3 data-i18n="gallery.items.rumos.title">Rumos</h3>
-                        <p data-i18n="gallery.items.rumos.description">Deep red rose pot</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="pure">
-                    <div class="gallery-image">
-                        <img src="images/pure.PNG" alt="Pure Candle" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3 data-i18n="gallery.items.pure.title">Pure Bouquet</h3>
-                        <p data-i18n="gallery.items.pure.description">Mixed flower Pot Bouquet</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="custom">
-                    <div class="gallery-image">
-                        <img src="images/custom-gift-white-rose.jpg" alt="Custom Candle" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3 data-i18n="gallery.items.custom.title">Custom White Flower Candle</h3>
-                        <p data-i18n="gallery.items.custom.description">Perfect Custom Gift For Events</p>
-                    </div>
-                </div>
-
-                <div class="gallery-item" data-category="alya">
-                    <div class="gallery-image">
-                        <img src="images/alya-2.jpg" alt="Alya Candle 2" loading="lazy">
-                    </div>
-                    <div class="gallery-overlay">
-                        <h3 data-i18n="gallery.items.alya2.title">Pink Rose Bloom</h3>
-                        <p data-i18n="gallery.items.alya2.description">Handcrafted rose candle bouquet</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
+    <!-- Main About Section -->
+    <section class="about about-page">
         <div class="container">
             <div class="about-content">
                 <div class="about-text">
@@ -168,6 +47,17 @@
                     <p data-i18n="about.paragraph1">Welcome to Flummie, where passion for art meets the timeless beauty of candles. Each flower candle is meticulously handcrafted to bring warmth, elegance, and a touch of nature into your home.</p>
                     <p data-i18n="about.paragraph2">Every creation is unique, made with premium wax and carefully sculpted to resemble the delicate petals of real flowers. Whether for decoration, gifts, or special occasions, Flummie candles are designed to captivate and inspire.</p>
                     <p data-i18n="about.paragraph3">Thank you for supporting handmade artistry and bringing a piece of floral beauty into your life.</p>
+
+                    <div class="about-details">
+                        <h3 data-i18n="about.craftsmanship.title">Our Craftsmanship</h3>
+                        <p data-i18n="about.craftsmanship.description">Each candle is a labor of love, taking hours to perfect. We use only premium, eco-friendly wax and carefully selected fragrances to ensure every piece is as beautiful as it is sustainable.</p>
+
+                        <h3 data-i18n="about.materials.title">Quality Materials</h3>
+                        <p data-i18n="about.materials.description">We believe in using the finest materials available. Our wax is 100% natural, our wicks are lead-free, and our fragrances are carefully curated to create the perfect ambiance.</p>
+
+                        <h3 data-i18n="about.story.title">Our Story</h3>
+                        <p data-i18n="about.story.description">Flummie was born from a passion for creating beautiful, unique pieces that bring joy to everyday life. What started as a hobby has blossomed into a collection of handcrafted candles that celebrate the beauty of nature.</p>
+                    </div>
                 </div>
                 <div class="about-image">
                     <div class="about-image-placeholder">
@@ -253,7 +143,7 @@
                 </div>
                 <div class="footer-links">
                     <a href="about.html" data-i18n="nav.about">About Us</a>
-                    <a href="#contact" data-i18n="nav.contact">Contact</a>
+                    <a href="index.html#contact" data-i18n="nav.contact">Contact</a>
                 </div>
                 <div class="footer-social">
                     <a href="https://www.instagram.com/_flummie?igsh=MWV3c2g2bXMyeHBybw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -268,17 +158,6 @@
             </div>
         </div>
     </footer>
-
-    <!-- Lightbox Modal -->
-    <div id="lightbox" class="lightbox">
-        <button class="lightbox-close" id="lightbox-close">&times;</button>
-        <button class="lightbox-prev" id="lightbox-prev">&#10094;</button>
-        <button class="lightbox-next" id="lightbox-next">&#10095;</button>
-        <div class="lightbox-content">
-            <img id="lightbox-img" src="" alt="">
-            <div class="lightbox-caption" id="lightbox-caption"></div>
-        </div>
-    </div>
 
     <script src="js/translations.js"></script>
     <script src="js/script.js"></script>

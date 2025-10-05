@@ -204,6 +204,14 @@ body {
     width: 100%;
 }
 
+.nav-menu a.active {
+    color: var(--primary-color);
+}
+
+.nav-menu a.active::after {
+    width: 100%;
+}
+
 .hamburger {
     display: none;
     flex-direction: column;
@@ -613,10 +621,80 @@ body {
     opacity: 0.9;
 }
 
+/* About Hero Section */
+.about-hero {
+    height: 60vh;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5e6e8 0%, #d4a5a5 100%);
+    overflow: hidden;
+    margin-top: 72px;
+}
+
+.about-hero .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="floral" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="50" cy="50" r="2" fill="rgba(255,255,255,0.3)"/></pattern></defs><rect width="100" height="100" fill="url(%23floral)"/></svg>');
+    opacity: 0.4;
+}
+
+.about-hero .hero-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.about-hero .hero-title {
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 1rem;
+    font-style: italic;
+    letter-spacing: 6px;
+    text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.4),
+                 0 0 30px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero .hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--white);
+    font-weight: 300;
+    letter-spacing: 2px;
+    text-shadow: 1px 2px 8px rgba(0, 0, 0, 0.4),
+                 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
 /* About Section */
 .about {
     padding: 100px 0;
     background: var(--white);
+}
+
+.about-page {
+    padding: 80px 0;
+    margin-top: 72px;
+}
+
+.about-details {
+    margin-top: 3rem;
+}
+
+.about-details h3 {
+    font-size: 1.8rem;
+    color: var(--primary-color);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
+}
+
+.about-details p {
+    margin-bottom: 1.5rem;
 }
 
 .about-content {
