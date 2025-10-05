@@ -31,6 +31,85 @@ body {
     color: var(--text-dark);
     background: var(--light-color);
     overflow-x: hidden;
+    position: relative;
+}
+
+/* Floating Flowers Animation */
+.flower-decoration {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    background-image: url('../images/bg-flower.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.flower-top-left {
+    top: 10%;
+    left: 5%;
+    animation: floatInOut 8s ease-in-out infinite;
+}
+
+.flower-top-right {
+    top: 15%;
+    right: 5%;
+    animation: floatInOut 8s ease-in-out infinite 2s;
+}
+
+.flower-bottom-left {
+    bottom: 20%;
+    left: 3%;
+    animation: floatInOut 8s ease-in-out infinite 4s;
+    width: 100px;
+    height: 100px;
+}
+
+.flower-bottom-right {
+    bottom: 15%;
+    right: 3%;
+    animation: floatInOut 8s ease-in-out infinite 6s;
+}
+
+.flower-mid-left {
+    top: 50%;
+    left: 2%;
+    animation: floatInOut 10s ease-in-out infinite 1s;
+    width: 70px;
+    height: 70px;
+}
+
+.flower-mid-right {
+    top: 60%;
+    right: 2%;
+    animation: floatInOut 10s ease-in-out infinite 5s;
+    width: 70px;
+    height: 70px;
+}
+
+@keyframes floatInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) rotate(0deg) scale(0.8);
+    }
+    25% {
+        opacity: 0.3;
+        transform: translateY(0) rotate(5deg) scale(1);
+    }
+    50% {
+        opacity: 0.5;
+        transform: translateY(-10px) rotate(-5deg) scale(1.05);
+    }
+    75% {
+        opacity: 0.3;
+        transform: translateY(0) rotate(3deg) scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px) rotate(0deg) scale(0.8);
+    }
 }
 
 .container {
@@ -738,6 +817,16 @@ body {
 
 /* Responsive Design */
 @media (max-width: 1024px) {
+    .flower-decoration {
+        width: 60px;
+        height: 60px;
+    }
+
+    .flower-bottom-left {
+        width: 70px;
+        height: 70px;
+    }
+
     .gallery-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -752,6 +841,10 @@ body {
 }
 
 @media (max-width: 768px) {
+    .flower-decoration {
+        display: none;
+    }
+
     .hamburger {
         display: flex;
     }
