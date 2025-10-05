@@ -61,7 +61,7 @@ body {
 }
 
 .flower-bottom-left {
-    bottom: 20%;
+    bottom: 25%;
     left: 3%;
     animation: floatInOut 8s ease-in-out infinite 4s;
     width: 140px;
@@ -69,7 +69,7 @@ body {
 }
 
 .flower-bottom-right {
-    bottom: 15%;
+    bottom: 20%;
     right: 3%;
     animation: floatInOut 8s ease-in-out infinite 6s;
 }
@@ -146,12 +146,28 @@ body {
     color: var(--primary-color);
     font-style: italic;
     letter-spacing: 2px;
+    transition: var(--transition);
+}
+
+/* Navbar shrink on scroll - desktop */
+.navbar.scrolled .logo {
+    font-size: 1.3rem;
+}
+
+.navbar.scrolled .nav-menu a {
+    font-size: 0.85rem;
+}
+
+.navbar.scrolled .lang-btn {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.75rem;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
     gap: 2.5rem;
+    align-items: center;
 }
 
 .nav-menu a {
@@ -741,6 +757,8 @@ body {
     background: var(--dark-color);
     color: var(--white);
     padding: 3rem 0 1.5rem;
+    position: relative;
+    z-index: 10;
 }
 
 .footer-content {
@@ -927,22 +945,32 @@ body {
     }
 
     .nav-container {
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
     }
 
     .language-switcher {
-        order: 2;
-        margin-top: 1rem;
+        position: relative;
+        top: auto;
+        right: auto;
         width: 100%;
+        padding: 0;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        background: transparent;
+        flex-direction: row;
         justify-content: center;
+        gap: 1rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        box-shadow: none;
+        z-index: auto;
     }
 
     .nav-menu {
         position: fixed;
-        top: 72px;
+        top: var(--navbar-height, 72px);
         right: -100%;
         width: 100%;
-        height: calc(100vh - 72px);
+        height: calc(100vh - var(--navbar-height, 72px));
         background: var(--white);
         flex-direction: column;
         padding: 2rem;
@@ -953,6 +981,26 @@ body {
 
     .nav-menu.active {
         right: 0;
+    }
+
+    /* Shrink navbar on scroll - mobile */
+    .navbar.scrolled {
+        padding: 0.4rem 0;
+    }
+
+    .navbar.scrolled .logo {
+        font-size: 1.2rem;
+    }
+
+    .navbar.scrolled .hamburger {
+        transform: scale(0.85);
+    }
+
+    /* Adjust menu position when navbar shrinks */
+    .navbar.scrolled + * .nav-menu,
+    .navbar.scrolled .nav-menu {
+        top: var(--navbar-height-scrolled, 52px);
+        height: calc(100vh - var(--navbar-height-scrolled, 52px));
     }
 
     .hero-title {

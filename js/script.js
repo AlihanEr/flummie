@@ -158,19 +158,42 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 let lastScroll = 0;
 const navbar = document.querySelector('.navbar');
 
+// Update mobile menu position based on navbar height
+function updateMenuPosition() {
+    const navbarHeight = navbar.offsetHeight;
+    document.documentElement.style.setProperty('--navbar-height', `${navbarHeight}px`);
+
+    if (window.innerWidth <= 768) {
+        const menu = document.querySelector('.nav-menu');
+        if (menu) {
+            menu.style.top = `${navbarHeight}px`;
+            menu.style.height = `calc(100vh - ${navbarHeight}px)`;
+        }
+    }
+}
+
 window.addEventListener('scroll', () => {
     const currentScroll = window.pageYOffset;
 
     if (currentScroll > 100) {
+        navbar.classList.add('scrolled');
         navbar.style.padding = '0.8rem 0';
         navbar.style.boxShadow = '0 2px 30px rgba(0, 0, 0, 0.1)';
     } else {
+        navbar.classList.remove('scrolled');
         navbar.style.padding = '1.2rem 0';
         navbar.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.05)';
     }
 
+    updateMenuPosition();
     lastScroll = currentScroll;
 });
+
+// Update on resize
+window.addEventListener('resize', updateMenuPosition);
+
+// Initial update
+updateMenuPosition();
 
 // Intersection Observer for scroll animations
 const observerOptions = {
