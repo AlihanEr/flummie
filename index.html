@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Flummie - Handcrafted flower candles that bring beauty and warmth to your space">
+    <title>Flummie - Artisan Flower Candles</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Flummie</div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#instagram">Instagram</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">Flummie</h1>
+            <p class="hero-subtitle">Handcrafted Flower Candles</p>
+            <p class="hero-description">Where artistry meets warmth - Each candle is a unique masterpiece</p>
+            <a href="#gallery" class="btn-primary">Explore Collection</a>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- Featured Section -->
+    <section class="featured">
+        <div class="container">
+            <div class="featured-grid">
+                <div class="featured-item">
+                    <div class="featured-icon">🌸</div>
+                    <h3>Handcrafted</h3>
+                    <p>Each candle is carefully handmade with love and attention to detail</p>
+                </div>
+                <div class="featured-item">
+                    <div class="featured-icon">🌺</div>
+                    <h3>Unique Designs</h3>
+                    <p>Beautiful flower shapes that bloom in wax, creating stunning centerpieces</p>
+                </div>
+                <div class="featured-item">
+                    <div class="featured-icon">✨</div>
+                    <h3>Premium Quality</h3>
+                    <p>Made with high-quality materials for long-lasting beauty and fragrance</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Creations</h2>
+                <p class="section-subtitle">A collection of handcrafted flower candles</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="alya">Alya</button>
+                <button class="filter-btn" data-filter="aza">Aza</button>
+                <button class="filter-btn" data-filter="rumos">Rumos</button>
+                <button class="filter-btn" data-filter="pure">Pure</button>
+                <button class="filter-btn" data-filter="custom">Custom crafts</button>
+            </div>
+
+            <!-- Gallery Grid -->
+            <div class="gallery-grid" id="gallery-grid">
+                <!-- Gallery items will be populated by JavaScript -->
+                <div class="gallery-item" data-category="alya">
+                    <div class="gallery-image">
+                        <img src="images/alya.PNG" alt="Alya Candle" loading="lazy">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>White Rose Bloom</h3>
+                        <p>Handcrafted rose candle bouquet</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="aza">
+                    <div class="gallery-image">
+                        <img src="images/aza.jpg" alt="Aza Candle" loading="lazy">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Aza Bouquet</h3>
+                        <p>Elegant rose candle bouquet</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="rumos">
+                    <div class="gallery-image">
+                        <img src="images/rumos.PNG" alt="Rumos Candle" loading="lazy">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Rumos</h3>
+                        <p>Deep red rose pot</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="pure">
+                    <div class="gallery-image">
+                        <img src="images/pure.PNG" alt="Pure Candle" loading="lazy">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Pure Bouquet</h3>
+                        <p>Mixed flower Pot Bouquet</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="custom">
+                    <div class="gallery-image">
+                        <img src="images/custom-gift-white-rose.jpg" alt="Custom Candle" loading="lazy">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Custom White Flower Candle</h3>
+                        <p>Perfect Custom Gift For Events</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-category="alya">
+                    <div class="gallery-image">
+                        <img src="images/alya-2.jpg" alt="Alya Candle 2" loading="lazy">
+                    </div>
+                    <div class="gallery-overlay">
+                        <h3>Pink Rose Bloom</h3>
+                        <p>Handcrafted rose candle bouquet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Flummie</h2>
+                    <p>Welcome to Flummie, where passion for art meets the timeless beauty of candles. Each flower candle is meticulously handcrafted to bring warmth, elegance, and a touch of nature into your home.</p>
+                    <p>Every creation is unique, made with premium wax and carefully sculpted to resemble the delicate petals of real flowers. Whether for decoration, gifts, or special occasions, Flummie candles are designed to captivate and inspire.</p>
+                    <p>Thank you for supporting handmade artistry and bringing a piece of floral beauty into your life.</p>
+                </div>
+                <div class="about-image">
+                    <div class="about-image-placeholder">
+                        <img src="images/flummie-logo.jpg" alt="Flummie Artisan" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Instagram Section -->
+    <section id="instagram" class="instagram-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Follow My Work</h2>
+                <p class="section-subtitle">See my latest creations on Instagram</p>
+            </div>
+
+            <div class="instagram-content">
+                <div class="instagram-icon">
+                    <svg width="80" height="80" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" fill="url(#instagram-gradient)"/>
+                        <defs>
+                            <linearGradient id="instagram-gradient" x1="2.163" y1="21.837" x2="21.837" y2="2.163" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#FD5" />
+                                <stop offset=".5" stop-color="#FF543E" />
+                                <stop offset="1" stop-color="#C837AB" />
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <h3>@_flummie</h3>
+                <p>Join our community and stay updated with new designs, behind-the-scenes content, and special offers.</p>
+                <a href="https://www.instagram.com/_flummie?igsh=MWV3c2g2bXMyeHBybw==" target="_blank" rel="noopener noreferrer" class="btn-instagram">
+                    Follow on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">Interested in custom orders or have questions?</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <h3>Email</h3>
+                        <a href="mailto:artflumie@gmail.com">artflumie@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <h3>Instagram</h3>
+                        <a href="https://www.instagram.com/_flummie?igsh=MWV3c2g2bXMyeHBybw==" target="_blank" rel="noopener noreferrer">@_flummie</a>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">💌</div>
+                        <h3>Custom Orders</h3>
+                        <p>Available for special requests and bulk orders</p>
+                    </div>
+                </div>
+
+                <div class="contact-cta">
+                    <p>For inquiries, custom orders, or collaborations, please reach out via email:</p>
+                    <a href="mailto:artflumie@gmail.com" class="btn-primary">Send Email</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>Flummie</h3>
+                    <p>Handcrafted flower candles made with love</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#gallery">Gallery</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/_flummie?igsh=MWV3c2g2bXMyeHBybw==" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Flummie. All rights reserved. | Handcrafted with ❤️</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <button class="lightbox-close" id="lightbox-close">&times;</button>
+        <button class="lightbox-prev" id="lightbox-prev">&#10094;</button>
+        <button class="lightbox-next" id="lightbox-next">&#10095;</button>
+        <div class="lightbox-content">
+            <img id="lightbox-img" src="" alt="">
+            <div class="lightbox-caption" id="lightbox-caption"></div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
