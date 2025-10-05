@@ -215,4 +215,50 @@ if ('loading' in HTMLImageElement.prototype) {
 // Add smooth transition for images
 lightboxImg.style.transition = 'opacity 0.3s ease';
 
+// Internationalization (i18n)
+let currentLanguage = localStorage.getItem('language') || 'en';
+
+// Load translations from translations.js
+function updateContent(lang) {
+    currentLanguage = lang;
+    localStorage.setItem('language', lang);
+
+    // Update all elements with data-i18n attribute
+    document.querySelectorAll('[data-i18n]').forEach(element => {
+        const key = element.getAttribute('data-i18n');
+        const keys = key.split('.');
+        let translation = translations[lang];
+
+        // Navigate through nested object
+        for (const k of keys) {
+            translation = translation[k];
+        }
+
+        if (translation) {
+            element.textContent = translation;
+        }
+    });
+
+    // Update language buttons
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
+        }
+    });
+}
+
+// Language switcher buttons
+document.querySelectorAll('.lang-btn').forEach(button => {
+    button.addEventListener('click', () => {
+        const lang = button.getAttribute('data-lang');
+        updateContent(lang);
+    });
+});
+
+// Initialize with saved or default language
+document.addEventListener('DOMContentLoaded', () => {
+    updateContent(currentLanguage);
+});
+
 console.log('Flummie Candles - Website loaded successfully! 🌸');

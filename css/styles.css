@@ -119,6 +119,35 @@ body {
     transition: var(--transition);
 }
 
+/* Language Switcher */
+.language-switcher {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.lang-btn {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    color: var(--text-dark);
+    padding: 0.4rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-family: 'Georgia', serif;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.lang-btn:hover {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
+.lang-btn.active {
+    background: var(--primary-color);
+    color: var(--white);
+}
+
 /* Hero Section */
 .hero {
     height: 100vh;
@@ -725,6 +754,17 @@ body {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+    }
+
+    .nav-container {
+        flex-wrap: wrap;
+    }
+
+    .language-switcher {
+        order: 2;
+        margin-top: 1rem;
+        width: 100%;
+        justify-content: center;
     }
 
     .nav-menu {
