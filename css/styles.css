@@ -147,6 +147,12 @@ body {
     font-style: italic;
     letter-spacing: 2px;
     transition: var(--transition);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logo:hover {
+    color: var(--secondary-color);
 }
 
 /* Navbar shrink on scroll - desktop */
